@@ -10,17 +10,17 @@
 
 if ( have_posts() ) {
 
-    $i = 1;
+	$i = 1;
 
-    
+
 	while ( have_posts() ) {
 		the_post();
 
-        if ( has_post_format( 'image' )) {
-            echo get_template_part( 'templates/single', 'image' );
-            continue;
-        }
-          
+		if ( has_post_format( 'image' ) ) {
+			echo get_template_part( 'templates/single', 'image' );
+			continue;
+		}
+
 		echo get_template_part( 'templates/single', 'article' );
 	}
 }

@@ -3,7 +3,7 @@
 $article_classes = '';
 
 if ( ! is_singular() ) {
-	$article_classes .= "mb-28";
+	$article_classes .= 'mb-28';
 }
 ?>
 
@@ -21,6 +21,12 @@ if ( ! is_singular() ) {
 	<!-- Article Content -->
 	<div class="bg-white p-5 md:p-16 lg:p-28">
 
+		<?php if( is_user_logged_in() ) { ?>
+			<p class="p-6 bg-red-50 mb-10">
+				<strong class="mb-10">Article Actions </strong> 
+				<br/><a href="<?php echo get_edit_post_link(); ?>">EDIT</a>
+			</p>
+		<?php } ?>
 		<a href="<?php echo get_post_permalink(); ?>">
 			<h1 class="text-5xl uppercase mb-5"><?php the_title(); ?></h1>
 		</a>

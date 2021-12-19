@@ -3,7 +3,7 @@
 $article_classes = '';
 
 if ( ! is_singular() ) {
-	$article_classes .= "mb-28";
+	$article_classes .= 'mb-28';
 }
 ?>
 
