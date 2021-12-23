@@ -67,7 +67,7 @@ function theme_comment_template( $comment, $args, $depth ) {
  * There have been security issues, plus it simply provides better
  * performance not to load unecessary core crap all the time.
  */
-function grd_remove_emoji() {
+function theme_remove_emoji() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -77,14 +77,14 @@ function grd_remove_emoji() {
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
 	// Remove from TinyMCE
-	add_filter( 'tiny_mce_plugins', 'grd_remove_tinymce_emoji' );
+	add_filter( 'tiny_mce_plugins', 'theme_remove_tinymce_emoji' );
 }
-add_action( 'init', 'grd_remove_emoji' );
+add_action( 'init', 'theme_remove_emoji' );
 
 /**
  * Filter out the tinymce emoji plugin.
  */
-function grd_remove_tinymce_emoji( $plugins ) {
+function theme_remove_tinymce_emoji( $plugins ) {
 
 	if ( ! is_array( $plugins ) ) {
 			return [];
