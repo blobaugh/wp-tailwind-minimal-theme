@@ -6,6 +6,25 @@
 							<title>Ben's Tailwind Playground</title>
 							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<?php wp_head(); ?>
+			<style>
+			 #commentform textarea {
+				 width: 100%;
+			 }
+			 #commentform input {
+				 width: 100%;
+			 }
+
+			 p {
+				 margin-top: 10px;
+			 }
+
+			 img.alignright {float:right; margin:0 0 1em 1em}
+			img.alignleft {float:left; margin:0 1em 1em 0}
+			img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+			a img.alignright {float:right; margin:0 0 1em 1em}
+			a img.alignleft {float:left; margin:0 1em 1em 0}
+			a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+			</style>
 						</head>
 		<body class="bg-gray-100">
 
@@ -48,4 +67,4 @@
 				</div>
 				<!-- END HEADER AREA -->
 
-				<main id="contents" class="flex flex-col w-full md:3/4 lg:w-2/3 mx-auto md:-mt-14 lg:-mt0=-20">
+				<main id="contents" class="flex flex-col w-full md:3/4 lg:w-2/3 mx-auto md:-mt-14 lg:-mt0=-20 ">
