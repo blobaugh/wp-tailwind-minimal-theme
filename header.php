@@ -28,6 +28,10 @@
 			.header-menu ul li {
 				position: relative;
 			}
+			.header-menu ul li>a:not(:only-child):after {
+				color: #fff;
+				content: ' ▾';
+			}
 			.header-menu ul li ul {
 				display: none;
 				position: absolute;
@@ -43,6 +47,10 @@
 			.header-menu ul li:hover > ul {
 				display: block;
 			}
+			.current-menu-item, .current-menu-ancestor {
+				border-bottom:1px solid #fff;
+				padding-bottom: 1px;
+			} 
 			</style>
 
 			
@@ -62,7 +70,7 @@
 										wp_nav_menu(
 											[
 												'theme_location' => 'header',
-												'container'  => 'nav',
+												'container' => 'nav',
 												'menu_id' => 'header-menu',
 												'container_class' => 'header-menu rflex-grow hidden md:block text-center py-8 md:py-0',
 												'menu_class' => 'flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5 justify-between',
