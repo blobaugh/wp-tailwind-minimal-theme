@@ -12,7 +12,7 @@ if ( ! is_singular() ) {
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="flex flex-col items-center justify-center bg-gray-900">                 
 			<a href="<?php echo get_post_permalink(); ?>" class="w-full">
-				<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-full" />
+				<img src="<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>" class="w-full" />
 			</a>
 		</div>
 	<?php } ?>

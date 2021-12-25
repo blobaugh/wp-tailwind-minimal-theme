@@ -1,4 +1,4 @@
-<div class="article-tags pt-16 space-y-4 space-x-4">
+<div class="article-tags mt-16 space-y-2 space-x-2 flex flex-wrap">
 	<?php
 		$tags = wp_get_post_tags( $post->ID ); // this is the adjustment, all the rest is bhlarsen
 

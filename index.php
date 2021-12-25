@@ -23,6 +23,8 @@ if ( have_posts() ) {
 
 		echo get_template_part( 'templates/single', 'article' );
 	}
+} else {
+	echo get_template_part( 'templates/status', '404' );
 }
 ?>
 
