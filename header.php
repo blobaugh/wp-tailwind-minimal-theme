@@ -24,7 +24,28 @@
 			a img.alignright {float:right; margin:0 0 1em 1em}
 			a img.alignleft {float:left; margin:0 1em 1em 0}
 			a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+			.header-menu ul li {
+				position: relative;
+			}
+			.header-menu ul li ul {
+				display: none;
+				position: absolute;
+				text-align: left;
+				left: 0;
+				z-index: 99999;
+				width: 200px;
+				box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+				padding: 5px 5px;
+				line-height: 1.8;
+				background-color: rgba(55,65,81,var(--tw-bg-opacity));
+			}
+			.header-menu ul li:hover > ul {
+				display: block;
+			}
 			</style>
+
+			
 						</head>
 		<body class="bg-gray-100">
 
@@ -36,27 +57,26 @@
 										<a href="/" class="w-full"><h1 class="text-3xl">Ben Lobaugh</h1></a>
 								</div>
 
-								<nav id="header-menu" class="flex-grow hidden md:block text-center py-8 md:py-0">
 									<?php
 									if ( has_nav_menu( 'header' ) ) {
 										wp_nav_menu(
 											[
 												'theme_location' => 'header',
 												'container'  => 'nav',
-												'container_class' => 'flex-grow hidden md:block text-center py-8 md:py-0',
+												'menu_id' => 'header-menu',
+												'container_class' => 'header-menu rflex-grow hidden md:block text-center py-8 md:py-0',
 												'menu_class' => 'flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5 justify-between',
 											]
 										);
 									}
 									?>
-								</nav>
 
 								<a id="navbar-burger" class="text-center md:hidden py-5" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></a>
 
 								<!-- Script that powers the hamburger icon -->
 								<script>
 										const btn = document.querySelector("#navbar-burger");
-										const menu = document.querySelector("#header-menu");
+										const menu = document.querySelector(".header-menu");
 
 										btn.addEventListener("click", () => {
 												menu.classList.toggle("hidden");

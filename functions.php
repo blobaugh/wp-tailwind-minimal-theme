@@ -18,6 +18,8 @@ add_action(
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menu( 'header', __( 'Header Menu' ) );
+
+		add_theme_support( 'automatic-feed-links' );
 	}
 );
 
@@ -119,7 +121,7 @@ remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 remove_action( 'wp_head', 'wp_generator' );
 
 // Automattic spy? Remove it in case.
-add_filter( 'emoji_svg_url', '__return_empty' );
+add_filter( 'emoji_svg_url', '__return_false' );
 
 function theme_excerpt_more( $more ) {
 	global $post;
