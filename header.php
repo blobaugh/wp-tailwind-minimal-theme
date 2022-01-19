@@ -88,7 +88,7 @@
 
 								<a id="navbar-burger" class="text-center md:hidden py-5" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></a>
 
-								<a id="navbar-search-btn" href="#">Search</a>
+								<!-- <a id="navbar-search-btn" href="#">Search</a> -->
 								
 						</header>
 						<div id="navbar-search" class="hidden flex flex-col w-full md:w-3/4 lg:w-2/3 mx-auto items-center text-gray-50 px-2">

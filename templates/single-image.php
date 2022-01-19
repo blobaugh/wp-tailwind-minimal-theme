@@ -15,7 +15,7 @@ if ( ! is_singular() ) {
 				if ( is_singular() ) { ?>               
 					<a href="<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>" class="w-full">
 			<?php } else { ?>
-					<a href="<?php echo get_post_permalink(); ?>" class="w-full">
+					<a href="<?php echo get_permalink(); ?>" class="w-full">
 				<?php } ?>
 				<img src="<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>" class="w-full" />
 			</a>

@@ -11,7 +11,7 @@ if ( ! is_singular() ) {
 	<!-- Featured Image -->
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="flex flex-col items-center justify-center bg-gray-900">                 
-			<a href="<?php echo get_post_permalink(); ?>" class="w-full">
+			<a href="<?php echo get_permalink(); ?>" class="w-full">
 				<img src="<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>" class="w-full" />
 			</a>
 		</div>
@@ -27,7 +27,7 @@ if ( ! is_singular() ) {
 				<br/><a href="<?php echo get_edit_post_link(); ?>">EDIT</a>
 			</p>
 		<?php } ?>
-		<a href="<?php echo get_post_permalink(); ?>">
+		<a href="<?php echo get_permalink(); ?>">
 			<h1 class="text-5xl uppercase mb-5"><?php the_title(); ?></h1>
 		</a>
 				
