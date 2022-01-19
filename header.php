@@ -38,11 +38,12 @@
 				text-align: left;
 				left: 0;
 				z-index: 99999;
-				width: 200px;
+				width: 300px;
 				box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 				padding: 5px 5px;
 				line-height: 1.8;
-				background-color: rgba(55,65,81,var(--tw-bg-opacity));
+				#background-color: rgba(55,65,81,var(--tw-bg-opacity));
+				background-color: #a1a1a1;
 			}
 			.header-menu ul li:hover > ul {
 				display: block;
