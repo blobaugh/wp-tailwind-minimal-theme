@@ -1,5 +1,5 @@
 <?php
-
+//
 $article_classes = '';
 
 if ( ! is_singular() ) {
@@ -19,7 +19,7 @@ if ( ! is_singular() ) {
 	<!-- End Featured Image -->
 
 	<!-- Article Content -->
-	<div class="bg-white p-5 md:p-16 lg:p-28 rounded-b-lg">
+	<div class="bg-white p-5 md:p-16 lg:p-28 rounded-b-lg prose-xl">
 
 		<?php if ( is_user_logged_in() ) { ?>
 			<p class="p-6 bg-red-50 mb-10">

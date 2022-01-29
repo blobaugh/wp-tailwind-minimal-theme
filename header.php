@@ -1,73 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-		<head>
-					<meta charset="UTF-8">
-						<meta name="viewport" content="width=device-width, initial-scale=1.0">
-							<title>Ben's Tailwind Playground</title>
-							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<?php wp_head(); ?>
-			<style>
-			 #commentform textarea {
-				 width: 100%;
-			 }
-			 #commentform input {
-				 width: 100%;
-			 }
-
-			 p {
-				 margin-top: 10px;
-			 }
-
-			 img.alignright {float:right; margin:0 0 1em 1em}
-			img.alignleft {float:left; margin:0 1em 1em 0}
-			img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-			a img.alignright {float:right; margin:0 0 1em 1em}
-			a img.alignleft {float:left; margin:0 1em 1em 0}
-			a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-
-			.header-menu ul li {
-				position: relative;
-			}
-			.header-menu ul li>a:not(:only-child):after {
-				color: #fff;
-				content: ' ▾';
-			}
-			.header-menu ul li ul {
-				display: none;
-				position: absolute;
-				text-align: left;
-				left: 0;
-				z-index: 99999;
-				width: 300px;
-				box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-				padding: 5px 5px;
-				line-height: 1.8;
-				#background-color: rgba(55,65,81,var(--tw-bg-opacity));
-				background-color: #a1a1a1;
-			}
-			.header-menu ul li:hover > ul {
-				display: block;
-			}
-			.current-menu-item, .current-menu-ancestor {
-				border-bottom:1px solid #fff;
-				padding-bottom: 1px;
-			} 
-			.searchform, .searchform div {
-				width: 100%;
-			}
-			.searchform input {
-				border: 1px solid black;
-				padding: 5px;
-			}
-			</style>
-
-			
-						</head>
-		<body class="bg-gray-100">
+	<head>
+		<title><?php wp_title(''); ?></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+		<link rel="stylesheet" href="https://ben.lobaugh.net/blog/wp-content/themes/wp-tailwind-minimal-theme/assets/css/main.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://ben.lobaugh.net/blog/wp-includes/css/dist/block-library/style.min.css" />
+		<?php //wp_head(); ?>
+</head>
+<body class="bg-gray-100">
 
 
 				<!-- START HEADER AREA -->
-				<div class="flex flex-col md:h-48 bg-gray-700 pt-10 w-full shadow-md">
+				<div class="flex flex-col md:h-48 pt-10 w-full shadow-md bg-sky-900">
 						<header class="flex flex-col md:flex-row w-full md:w-3/4 lg:w-2/3 mx-auto items-center text-gray-50 px-2">
 								<div class="flex-grow md:text-left pr-5">
 										<a href="/" class="w-full"><h1 class="text-3xl">Ben Lobaugh</h1></a>

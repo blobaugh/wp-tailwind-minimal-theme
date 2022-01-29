@@ -23,6 +23,13 @@ add_action(
 	}
 );
 
+
+function theme_enqueue_scripts() {
+	wp_enqueue_style('theme_style', get_theme_file_uri('assets/css/main.min.css'));
+	wp_dequeue_style( 'wp-block-library' );
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
 /**
  * Comment output template.
  */
