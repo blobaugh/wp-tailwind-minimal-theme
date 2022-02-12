@@ -288,3 +288,15 @@ function theme_paginate_links() {
 
 	echo $r;
 }
+
+/**
+ * Retrieve an SVG from the assets folder
+ */
+function get_svg( $svg ) {
+	// @todo sanitize $svg
+	$file = get_template_directory() . "/assets/svg/$svg.svg";
+	if ( file_exists( $file ) ) {
+		require( $file );
+		return;
+	}
+}
